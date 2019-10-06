@@ -1,0 +1,23 @@
+textarea {
+    border: none;
+    resize: none;
+    font-size: 14px;
+    font-weight: normal;
+    height: 70%;
+    box-shadow: none;
+    width: 100%;
+}
+
+textarea:focus {
+    border: 1px solid grey;
+    box-shadow: none;
+    outline: none;
+}
+
+.textarea__counter {
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+}

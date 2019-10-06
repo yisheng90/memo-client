@@ -1,0 +1,23 @@
+.card__container {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.card__action--delete {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #757575;
+    cursor: pointer;
+}
+
+.card__details--date {
+    font-size: 10px;
+    font-style: italic;
+}
+

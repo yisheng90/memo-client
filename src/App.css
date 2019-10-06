@@ -1,5 +1,10 @@
 .App {
+  position: relative;
   text-align: center;
+  background: #BABABA;
+  min-height: 100vh;
+  margin-top: -10px;
+  padding: 20px;
 }
 
 .App-logo {
@@ -19,4 +24,25 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.cards__container {
+  margin: 0 auto;
+  width: 90vw;
+  text-align: left;
+}
+
+.header_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.header__action-add {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
 }
