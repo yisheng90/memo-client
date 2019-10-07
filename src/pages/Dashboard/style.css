@@ -5,7 +5,7 @@
   min-height: 100vh;
   margin: -10px auto 10px auto;
   padding: 20px;
-  max-width: 1180px;
+  width: 95vw;
 }
 
 .App-logo {
@@ -29,7 +29,7 @@
 
 .cards__container {
   margin: 0 auto;
-  width: 90vw;
+  width: 95vw;
   text-align: left;
 }
 
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  max-width: 1180px;
+  width: 95vw;
   margin: 0 auto;
 }
 
