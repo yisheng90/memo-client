@@ -48,7 +48,8 @@ export const Dashboard = () => {
       </div>
 
       <div className='cards__container'>
-        {ideasElement}
+        {sortedIdeas.length > 0 && ideasElement}
+        {sortedIdeas.length === 0 && <h3>We're sorry. Your ideas board is empty.</h3>}
       </div>
     </div>
   )

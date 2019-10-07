@@ -44,7 +44,6 @@ export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
         size='xs'
         className="card__action--delete"
         onClick={() => onDelete(idea.id)}/>}
-
     </div>
   )
 }
