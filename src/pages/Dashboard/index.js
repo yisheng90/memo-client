@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeartBroken } from '@fortawesome/free-solid-svg-icons'
 import { useIdea } from '../../hooks/useIdea'
 import { useSorting, sortOptions } from '../../hooks/useSorting'
 import { useNotification } from '../../hooks/useNotification'
@@ -49,7 +50,12 @@ export const Dashboard = () => {
 
       <div className='cards__container'>
         {sortedIdeas.length > 0 && ideasElement}
-        {sortedIdeas.length === 0 && <h3>We're sorry. Your ideas board is empty.</h3>}
+        {sortedIdeas.length === 0 && (
+          <div className='cards__container--placeholder'>
+            <FontAwesomeIcon icon={faHeartBroken} size='2x'/>
+            <h3>We're sorry. Your ideas board is empty.</h3>
+          </div>
+        )}
       </div>
     </div>
   )
