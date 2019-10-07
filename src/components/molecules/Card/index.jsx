@@ -9,7 +9,6 @@ import { Input } from '../../atoms/Input'
 export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
   const [isDelectable, setIsDeletable] = useState(false)
   const createdDate = new Date(idea.created_date).toLocaleString()
-  const handleHover = useCallback(() => setIsDeletable(prev => !prev), [])
 
   const handleTitleChange = useCallback((value) => {
     if (value !== idea.title) {
@@ -27,8 +26,8 @@ export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
 
   return (
     <div className="card__container"
-         onMouseEnter={handleHover}
-         onMouseLeave={handleHover}>
+         onMouseEnter={() => setIsDeletable(true)}
+         onMouseLeave={() => setIsDeletable(false)}>
 
       <Input
         defaultValue={idea.title}

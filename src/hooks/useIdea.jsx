@@ -7,7 +7,7 @@ const headers = {
   'Content-Type': 'application/json',
 }
 
-export const useIdea = () => {
+export const useIdea = (callback) => {
   const [ideas, setIdeas] = React.useState([])
 
   const fetchIdeas = async () => {
@@ -56,6 +56,7 @@ export const useIdea = () => {
         prevValues[index] = params
         return [...prevValues]
       })
+      callback(`${params.title} has been updated!`)
     }
   }
 
