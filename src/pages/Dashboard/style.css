@@ -1,36 +1,15 @@
-.App {
+.dashboard {
   position: relative;
   text-align: center;
   background: white;
-  min-height: 100vh;
   margin: -10px auto 10px auto;
   padding: 20px;
   width: 95vw;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
 .cards__container {
-  margin: 0 auto;
-  width: 95vw;
   text-align: left;
+  padding-top: 20px;
 }
 
 .header_container {
@@ -38,7 +17,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 95vw;
   margin: 0 auto;
 }
 

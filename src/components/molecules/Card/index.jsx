@@ -11,14 +11,14 @@ export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
   const createdDate = new Date(idea.created_date).toLocaleString()
 
   const handleTitleChange = useCallback((value) => {
-    if (value !== idea.title) {
+    if (value && value !== idea.title) {
       onUpdate({ ...idea, ...{ title: value } })
     }
     enableSort()
   }, [idea, onUpdate, enableSort])
 
   const handleBodyChange = useCallback((value) => {
-    if (value !== idea.body) {
+    if (value && value !== idea.body) {
       onUpdate({ ...idea, ...{ body: value } })
     }
     enableSort()

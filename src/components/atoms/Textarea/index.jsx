@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import './style.css'
 
-const MAX_CHAR_COUNT = 30
-const MAX_CHAR_LIMIT_DISPLAY_AT = 15
+const MAX_CHAR_COUNT = 140
+const SHOW_CHAR_COUNT_AT = 15
 
 export const Textarea = ({ defaultValue = '', onBlur, onFocus }) => {
   const [value, setValue] = useState(defaultValue)
   const [showCount, setShowCount] = useState(false)
 
-  const checkShowCount = () => setShowCount(value && (MAX_CHAR_COUNT - value.length < MAX_CHAR_LIMIT_DISPLAY_AT))
+  const checkShowCount = () => setShowCount(value && (MAX_CHAR_COUNT - value.length < SHOW_CHAR_COUNT_AT))
 
   const handleChange = (event) => {
     const value = event.target.value

@@ -30,7 +30,7 @@ export const Dashboard = () => {
                                                      onUpdate={updateIdea}/>)
 
   return (
-    <div className="App">
+    <div className="dashboard">
       <header className="header_container">
         <h1>Ideas Board</h1>
       </header>
