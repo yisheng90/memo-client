@@ -48,7 +48,7 @@ export const Dashboard = () => {
   return (
     <div className="dashboard" data-testid="dashboard">
       <header className="header_container">
-        <h1>Ideas Board</h1>
+        <h1>Idea Board</h1>
       </header>
       <Notification />
 
@@ -71,7 +71,7 @@ export const Dashboard = () => {
           {sortedIdeas.length === 0 && (
             <div className="cards__container--placeholder">
               <FontAwesomeIcon icon={faHeartBroken} size="2x" />
-              <h3>We're sorry. Your ideas board is empty.</h3>
+              <h3>We're sorry. Your idea board is empty.</h3>
             </div>
           )}
         </div>
