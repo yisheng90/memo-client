@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b8a3a4a04d0f3815ee26119236d2d51",
+    "revision": "f779590d69ac5552c12b3695d8e1d1b2",
     "url": "/memo-client/index.html"
   },
   {
-    "revision": "210aedb8d7b032fa6ef1",
+    "revision": "7fbb2dee8881bdb6740c",
     "url": "/memo-client/static/css/main.a0e5010a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/memo-client/static/js/2.66454f2c.chunk.js"
   },
   {
-    "revision": "210aedb8d7b032fa6ef1",
-    "url": "/memo-client/static/js/main.c626d7b0.chunk.js"
+    "revision": "7fbb2dee8881bdb6740c",
+    "url": "/memo-client/static/js/main.9fcd2462.chunk.js"
   },
   {
     "revision": "af2b735479ababbafe95",
