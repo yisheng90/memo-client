@@ -1,14 +1,14 @@
 input {
-    border: none;
-    font-size: 14px;
-    font-weight: 900;
-    width: 100%;
-    box-shadow: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 900;
+  width: 100%;
+  box-shadow: none;
 }
 
 input:focus {
-    border: 1px solid #D8D8D8;
-    box-shadow: none;
-    border-radius: 5px;
-    outline: none;
+  border: 1px solid #d8d8d8;
+  box-shadow: none;
+  border-radius: 5px;
+  outline: none;
 }

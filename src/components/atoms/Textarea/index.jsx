@@ -8,9 +8,10 @@ export const Textarea = ({ defaultValue = '', onBlur, onFocus }) => {
   const [value, setValue] = useState(defaultValue)
   const [showCount, setShowCount] = useState(false)
 
-  const checkShowCount = () => setShowCount(value && (MAX_CHAR_COUNT - value.length < SHOW_CHAR_COUNT_AT))
+  const checkShowCount = () =>
+    setShowCount(value && MAX_CHAR_COUNT - value.length < SHOW_CHAR_COUNT_AT)
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const value = event.target.value
 
     if (value.length <= MAX_CHAR_COUNT) {
@@ -34,8 +35,13 @@ export const Textarea = ({ defaultValue = '', onBlur, onFocus }) => {
           onFocus()
         }}
         onChange={handleChange}
-        onBlur={() => handleBlur()}/>
-      {showCount && (<span className="textarea__counter">{value.length}/{MAX_CHAR_COUNT}</span>)}
+        onBlur={() => handleBlur()}
+      />
+      {showCount && (
+        <span className="textarea__counter">
+          {value.length}/{MAX_CHAR_COUNT}
+        </span>
+      )}
     </>
   )
 }

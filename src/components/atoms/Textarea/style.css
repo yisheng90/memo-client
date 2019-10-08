@@ -1,24 +1,24 @@
 textarea {
-    border: none;
-    resize: none;
-    font-size: 14px;
-    font-weight: normal;
-    height: 65%;
-    box-shadow: none;
-    width: 95%;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: normal;
+  height: 65%;
+  box-shadow: none;
+  width: 95%;
 }
 
 textarea:focus {
-    border: 1px solid #D8D8D8;
-    box-shadow: none;
-    border-radius: 5px;
-    outline: none;
+  border: 1px solid #d8d8d8;
+  box-shadow: none;
+  border-radius: 5px;
+  outline: none;
 }
 
 .textarea__counter {
-    font-size: 10px;
-    color: red;
-    position: absolute;
-    right: 15px;
-    bottom: 10px;
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
 }

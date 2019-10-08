@@ -11,7 +11,7 @@
 .cards__container {
   text-align: left;
   margin-top: 20px;
-  background: #EDEDED;
+  background: #ededed;
   min-height: 70vh;
   border-radius: 10px;
 }
@@ -48,7 +48,7 @@
 }
 
 .button__primary {
-  background: #1DA1F2;
+  background: #1da1f2;
   border-radius: 4px;
   color: white;
   padding: 5px 10px;
@@ -57,11 +57,11 @@
 }
 
 .button__primary:hover {
-  background: #1C8FD6;
+  background: #1c8fd6;
 }
 
 .button__primary:disabled {
-  background: #EDEDED;
+  background: #ededed;
   cursor: not-allowed;
 }
 
