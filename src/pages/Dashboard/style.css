@@ -47,31 +47,6 @@
   z-index: 100;
 }
 
-.button__primary {
-  background: #1da1f2;
-  border-radius: 4px;
-  color: white;
-  padding: 5px 10px;
-  line-height: 18px;
-  cursor: pointer;
-}
-
-.button__primary:hover {
-  background: #1c8fd6;
-}
-
-.button__primary:disabled {
-  background: #ededed;
-  cursor: not-allowed;
-}
-
-.select__dropdown {
-  height: 30px;
-  width: 80px;
-  margin: 0 20px;
-  background: white;
-}
-
 .cards__container--placeholder {
   width: 100%;
   height: 40vh;

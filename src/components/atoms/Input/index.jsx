@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import './style.css'
 
 export const Input = ({ defaultValue = '', onBlur, onFocus }) => {
   const [value, setValue] = useState(defaultValue)
   const inputEl = useRef(null)
 
-  const handleChange = event => setValue(event.target.value)
+  const handleChange = useCallback(event => setValue(event.target.value), [])
 
   useEffect(() => {
     if (!value && inputEl.current) {
@@ -15,6 +15,7 @@ export const Input = ({ defaultValue = '', onBlur, onFocus }) => {
 
   return (
     <input
+      data-testid='input'
       ref={inputEl}
       value={value}
       onFocus={onFocus}

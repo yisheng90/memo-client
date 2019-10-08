@@ -15,7 +15,7 @@ textarea:focus {
   outline: none;
 }
 
-.textarea__counter {
+.textarea__word_counter {
   font-size: 10px;
   color: red;
   position: absolute;

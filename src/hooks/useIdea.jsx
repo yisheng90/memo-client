@@ -69,7 +69,6 @@ export const useIdea = notify => {
   return {
     ideas,
     haveEmptyIdea,
-    fetchIdeas,
     addIdea,
     deleteIdea,
     updateIdea,

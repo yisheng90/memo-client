@@ -17,7 +17,7 @@ export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
       }
       enableSort()
     },
-    [idea, onUpdate, enableSort]
+    [idea, onUpdate, enableSort],
   )
 
   const handleBodyChange = useCallback(
@@ -28,21 +28,24 @@ export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
 
       enableSort()
     },
-    [idea, onUpdate, enableSort]
+    [idea, onUpdate, enableSort],
   )
 
   return (
     <div
+      data-testid="card__container"
       className={`card__container ${!idea.title && 'card__container--empty'}`}
       onMouseMove={() => setIsDeletable(true)}
       onMouseLeave={() => setIsDeletable(false)}>
+
       <Input
         defaultValue={idea.title}
         onFocus={disableSort}
         onBlur={handleTitleChange}
         placeholder="Title"
       />
-      <span className="card__details--date">{createdDate}</span>
+
+      <span className="card__details--date" data-testid="card__details--date">{createdDate}</span>
 
       <Textarea
         defaultValue={idea.body}
@@ -55,6 +58,7 @@ export const Card = ({ idea, onDelete, onUpdate, enableSort, disableSort }) => {
           icon={faTrash}
           size="xs"
           className="card__action--delete"
+          data-testid="card__action--delete"
           onClick={() => onDelete(idea.id)}
         />
       )}

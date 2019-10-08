@@ -7,6 +7,8 @@ import { useNotification } from '../../hooks/useNotification'
 import './style.css'
 
 import { Card } from '../../components/molecules/Card'
+import { Button } from '../../components/atoms/Button'
+import { Select } from '../../components/atoms/Select'
 
 export const Dashboard = () => {
   const { Notification, notify } = useNotification()
@@ -44,36 +46,27 @@ export const Dashboard = () => {
   ))
 
   return (
-    <div className="dashboard">
+    <div className="dashboard" data-testid="dashboard">
       <header className="header_container">
         <h1>Ideas Board</h1>
       </header>
-      <Notification />
+      <Notification/>
+
       <div className="cards_action__container">
-        <button
-          className="button__primary"
-          disabled={haveEmptyIdea}
-          onClick={addIdea}>
+        <Button disabled={haveEmptyIdea} onClick={addIdea}>
           + New idea
-        </button>
-        <select
-          className="select__dropdown"
-          value={sortField}
-          onChange={e => updateSortingField(e.target.value)}>
-          {sortOptions.map(option => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+        </Button>
+
+        <Select options={sortOptions} onChange={updateSortingField} selectedValue={sortField}/>
       </div>
 
       <div className="cards__container" ref={targetRef}>
         <div className="cards__container--inner" style={{ width: `${boardWidth}` }}>
           {sortedIdeas.length > 0 && ideasElement}
+
           {sortedIdeas.length === 0 && (
             <div className="cards__container--placeholder">
-              <FontAwesomeIcon icon={faHeartBroken} size="2x" />
+              <FontAwesomeIcon icon={faHeartBroken} size="2x"/>
               <h3>We're sorry. Your ideas board is empty.</h3>
             </div>
           )}
