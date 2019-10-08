@@ -1,0 +1,8 @@
+{
+  "short_name": "Idea Board",
+  "name": "Idea Board",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
