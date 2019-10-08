@@ -2,18 +2,23 @@
   position: relative;
   text-align: center;
   background: white;
-  margin: -10px auto 10px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding-top: 20px;
   width: 95vw;
+  font-family: Lato, sans-serif;
 }
 
 .cards__container {
   text-align: left;
   margin-top: 20px;
-  background: #E3E4E6;
-  min-height: 80vh;
+  background: #EDEDED;
+  min-height: 70vh;
   border-radius: 10px;
-  padding: 10px;
+}
+
+.cards__container--inner {
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .header_container {
@@ -53,6 +58,11 @@
 
 .button__primary:hover {
   background: #1C8FD6;
+}
+
+.button__primary:disabled {
+  background: #EDEDED;
+  cursor: not-allowed;
 }
 
 .select__dropdown {

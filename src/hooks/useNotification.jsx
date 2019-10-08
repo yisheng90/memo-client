@@ -9,14 +9,14 @@ export const useNotification = () => {
     return [...prevValues]
   })
 
-  const removeNotification = (message) => setNotification(prevValues => {
-    prevValues = prevValues.filter(notification => notification !== message)
+  const removeNotification = (targetIndex) => setNotification(prevValues => {
+    prevValues = prevValues.filter((notification, index) => index !== targetIndex)
     return [...prevValues]
   })
 
   const Notification = () => (
     <div className='notification__container'>
-      {notifications.map(notification => <NotificationCard message={notification} onCancel={removeNotification}/>)}
+      {notifications.map((notification, index) => <NotificationCard message={notification} onCancel={()=> removeNotification(index)}/>)}
     </div>
   )
 
