@@ -8,10 +8,8 @@ describe('Dashboard', () => {
   afterEach(() => cleanup())
 
   it('should render Dashboard page', () => {
-    const { getByTestId } = render(<Dashboard/>)
+    const { getByTestId } = render(<Dashboard />)
 
     expect(getByTestId('dashboard')).toBeTruthy()
-
   })
 })
-

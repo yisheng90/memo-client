@@ -12,13 +12,17 @@ describe('Button', () => {
   afterEach(() => cleanup())
 
   it('should render Button', () => {
-    const { getByTestId, getByText } = render(<Button onClick={mockOnClick}>{EXPECTED_TEXT}</Button>)
+    const { getByTestId, getByText } = render(
+      <Button onClick={mockOnClick}>{EXPECTED_TEXT}</Button>
+    )
     expect(getByTestId(TEST_ID)).toBeTruthy()
     expect(getByText(EXPECTED_TEXT)).toBeTruthy()
   })
 
   it('should call onClick when it is clicked', () => {
-    const { getByTestId } = render(<Button onClick={mockOnClick}>{EXPECTED_TEXT}</Button>)
+    const { getByTestId } = render(
+      <Button onClick={mockOnClick}>{EXPECTED_TEXT}</Button>
+    )
     const button = getByTestId(TEST_ID)
 
     fireEvent.click(button)
@@ -26,4 +30,3 @@ describe('Button', () => {
     expect(mockOnClick).toHaveBeenCalled()
   })
 })
-

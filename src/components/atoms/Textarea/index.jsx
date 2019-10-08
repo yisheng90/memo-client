@@ -9,11 +9,10 @@ export const Textarea = ({ defaultValue = '', onBlur, onFocus }) => {
   const [showCount, setShowCount] = useState(false)
 
   const checkShowCount = () =>
-    setShowCount((MAX_CHAR_COUNT - value.length) < SHOW_CHAR_COUNT_AT)
+    setShowCount(MAX_CHAR_COUNT - value.length < SHOW_CHAR_COUNT_AT)
 
   const handleChange = event => {
     const value = event.target.value
-
 
     if (value.length <= MAX_CHAR_COUNT) {
       setValue(event.target.value)

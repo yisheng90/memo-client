@@ -50,14 +50,18 @@ export const Dashboard = () => {
       <header className="header_container">
         <h1>Ideas Board</h1>
       </header>
-      <Notification/>
+      <Notification />
 
       <div className="cards_action__container">
         <Button disabled={haveEmptyIdea} onClick={addIdea}>
           + New idea
         </Button>
 
-        <Select options={sortOptions} onChange={updateSortingField} selectedValue={sortField}/>
+        <Select
+          options={sortOptions}
+          onChange={updateSortingField}
+          selectedValue={sortField}
+        />
       </div>
 
       <div className="cards__container" ref={targetRef}>
@@ -66,7 +70,7 @@ export const Dashboard = () => {
 
           {sortedIdeas.length === 0 && (
             <div className="cards__container--placeholder">
-              <FontAwesomeIcon icon={faHeartBroken} size="2x"/>
+              <FontAwesomeIcon icon={faHeartBroken} size="2x" />
               <h3>We're sorry. Your ideas board is empty.</h3>
             </div>
           )}

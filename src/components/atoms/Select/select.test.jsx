@@ -12,15 +12,25 @@ describe('Select', () => {
   afterEach(() => cleanup())
 
   it('should render Select', () => {
-    const { getByTestId } = render(<Select options={mockOptions} onChange={mockOnChange}
-                                           selectedValue={mockOptions[0]}/>)
+    const { getByTestId } = render(
+      <Select
+        options={mockOptions}
+        onChange={mockOnChange}
+        selectedValue={mockOptions[0]}
+      />
+    )
 
     expect(getByTestId(TEST_ID)).toBeTruthy()
   })
 
   it('should call onChange when it the option changed', () => {
-    const { getByTestId } = render(<Select options={mockOptions} onChange={mockOnChange}
-                                           selectedValue={mockOptions[0]}/>)
+    const { getByTestId } = render(
+      <Select
+        options={mockOptions}
+        onChange={mockOnChange}
+        selectedValue={mockOptions[0]}
+      />
+    )
     const select = getByTestId(TEST_ID)
 
     fireEvent.change(select, { target: { value: mockOptions[1] } })
@@ -28,4 +38,3 @@ describe('Select', () => {
     expect(mockOnChange).toHaveBeenCalled()
   })
 })
-

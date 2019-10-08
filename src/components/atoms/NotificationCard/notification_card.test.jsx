@@ -11,14 +11,18 @@ describe('NotificationCard', () => {
 
   it('should render NotificationCard', () => {
     const expectedText = lorem.sentence()
-    const { getByTestId, getByText } = render(<NotificationCard message={expectedText} onCancel={mockOnCancel}/>)
+    const { getByTestId, getByText } = render(
+      <NotificationCard message={expectedText} onCancel={mockOnCancel} />
+    )
 
     expect(getByTestId('notification__card')).toBeTruthy()
     expect(getByText(expectedText)).toBeTruthy()
   })
 
   it('should call onCancel when the cancel button is clicked', () => {
-    const { getByTestId } = render(<NotificationCard message={lorem.sentence()} onCancel={mockOnCancel}/>)
+    const { getByTestId } = render(
+      <NotificationCard message={lorem.sentence()} onCancel={mockOnCancel} />
+    )
     const closeButton = getByTestId('notification__card--close')
 
     fireEvent.click(closeButton)
@@ -26,4 +30,3 @@ describe('NotificationCard', () => {
     expect(mockOnCancel).toHaveBeenCalled()
   })
 })
-

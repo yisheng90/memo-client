@@ -15,7 +15,7 @@ export const Input = ({ defaultValue = '', onBlur, onFocus }) => {
 
   return (
     <input
-      data-testid='input'
+      data-testid="input"
       ref={inputEl}
       value={value}
       onFocus={onFocus}

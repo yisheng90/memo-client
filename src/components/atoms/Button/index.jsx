@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-export const Button = ({ disabled, onClick , children}) => (
+export const Button = ({ disabled, onClick, children }) => (
   <button
     data-testid="button"
     className="button__primary"
