@@ -1,4 +1,5 @@
 textarea {
+  position: relative;
   border: none;
   resize: none;
   font-size: 14px;

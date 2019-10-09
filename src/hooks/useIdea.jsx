@@ -28,7 +28,7 @@ export const useIdea = notify => {
 
         if (data) {
             setIdeas(prev => [data, ...prev])
-            window.location.href = `${window.location.href}#${data.id}`
+            window.location.href = `${window.location.href.split('#')[0]}#${data.id}`
         }
     }
 
