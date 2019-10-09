@@ -1,4 +1,5 @@
 import React from 'react'
+import * as PropTypes from 'prop-types';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
 import './style.css'
@@ -11,7 +12,7 @@ export const Modal = ({isVisible, onCancel, children}) => {
                     <div className="modal__container--inner">
                         {children}
 
-                    <span
+                        <span
                             className="modal__action--close"
                             onClick={onCancel}
                             data-testid="modal__action--close">
@@ -23,4 +24,11 @@ export const Modal = ({isVisible, onCancel, children}) => {
         )
     }
     return null
+}
+
+
+Modal.propTypes = {
+    isVisible: PropTypes.bool,
+    onCancel: PropTypes.func.isRequired,
+    children: PropTypes.arrayOf(PropTypes.element)
 }

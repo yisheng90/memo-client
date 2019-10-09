@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react'
+import * as PropTypes from 'prop-types';
 import './style.css'
 
 const MAX_CHAR_COUNT = 140
@@ -45,4 +46,11 @@ export const Textarea = ({value, onBlur, onFocus, onChange}) => {
             )}
         </>
     )
+}
+
+Textarea.propType = {
+    value: PropTypes.string,
+    onBlur: PropTypes.func.isRequired,
+    onFocus: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
 }

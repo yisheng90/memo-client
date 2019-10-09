@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react'
+import * as PropTypes from 'prop-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 import './style.css'
@@ -20,7 +21,7 @@ export const Card = ({idea, onDelete, onUpdate, enableSort, disableSort}) => {
         if (idea.title !== formValues.title || idea.body !== formValues.body) {
             onUpdate(formValues)
         }
-        enableSort()
+        enableSort &&  enableSort()
     }
 
     const handleBodyFieldUpdate = () => {
@@ -88,4 +89,17 @@ export const Card = ({idea, onDelete, onUpdate, enableSort, disableSort}) => {
             </Modal>
         </>
     )
+}
+
+Card.propType = {
+    idea: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        created_at: PropTypes.string.isRequired,
+        title: PropTypes.string,
+        body: PropTypes.string
+    }).isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onUpdate: PropTypes.func.isRequired,
+    enableSort: PropTypes.func,
+    disableSort: PropTypes.func,
 }

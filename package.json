@@ -2,12 +2,14 @@
   "name": "memo-client",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://yisheng90.github.io/memo-client",
+  "homepage": "https://yisheng90.github.io/memo-client",
   "dependencies": {
+    "@babel/runtime": "^7.6.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.5",
     "gh-pages": "^2.1.1",
+    "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"

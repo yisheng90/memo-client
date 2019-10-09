@@ -12,8 +12,7 @@ import {Select} from '../../components/atoms/Select'
 
 export const Dashboard = () => {
     const {Notification, notify} = useNotification()
-
-    const {ideas, initialized, addIdea, deleteIdea, updateIdea} = useIdea(notify)
+    const {ideas, loading, addIdea, deleteIdea, updateIdea} = useIdea(notify)
     const {
         sortedIdeas,
         sortField,
@@ -70,14 +69,14 @@ export const Dashboard = () => {
 
                     {sortedIdeas.length > 0 && ideasElement}
 
-                    {!initialized && sortedIdeas.length === 0 && (
+                    {loading && sortedIdeas.length === 0 && (
                         <div className="cards__container--placeholder">
                             <FontAwesomeIcon icon={faHeartBroken} size="2x"/>
                             <h3>Loading....</h3>
                         </div>
                     )}
 
-                    {initialized && sortedIdeas.length === 0 && (
+                    {!loading && sortedIdeas.length === 0 && (
                         <div className="cards__container--placeholder">
                             <FontAwesomeIcon icon={faHeartBroken} size="2x"/>
                             <h3>We're sorry. Your idea board is empty.</h3>

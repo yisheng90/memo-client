@@ -8,14 +8,15 @@ const headers = {
 }
 
 export const useIdea = notify => {
-    const [initialized, setInitialized] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [ideas, setIdeas] = useState([])
 
     const fetchIdeas = async () => {
+        setLoading(true)
         const response = await fetch(`${API_URL}/ideas`)
         const data = await response.json()
         setIdeas(data)
-        setInitialized(true)
+        setLoading(false)
     }
 
     const addIdea = async () => {
@@ -84,10 +85,9 @@ export const useIdea = notify => {
     }
 
     useEffect(() => {
-        if (!initialized) {
-            fetchIdeas()
-        }
-    }, [initialized])
+        if (!loading) return
+        fetchIdeas()
+    }, [loading])
 
     return {
         ideas,
