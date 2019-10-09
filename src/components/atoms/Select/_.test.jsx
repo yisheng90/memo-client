@@ -6,7 +6,7 @@ import { Select } from './index'
 
 const mockOnChange = jest.fn()
 const TEST_ID = 'select'
-const mockOptions = [lorem.word, lorem.word]
+const mockOptions = [lorem.word(), lorem.word()]
 
 describe('Select', () => {
   afterEach(() => cleanup())
@@ -35,6 +35,6 @@ describe('Select', () => {
 
     fireEvent.change(select, { target: { value: mockOptions[1] } })
 
-    expect(mockOnChange).toHaveBeenCalled()
+    expect(mockOnChange).toHaveBeenCalledWith(mockOptions[1])
   })
 })

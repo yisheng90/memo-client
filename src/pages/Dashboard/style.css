@@ -12,8 +12,9 @@
   text-align: left;
   margin-top: 20px;
   background: #ededed;
-  min-height: 70vh;
+  height: 70vh;
   border-radius: 10px;
+  overflow: scroll;
 }
 
 .cards__container--inner {

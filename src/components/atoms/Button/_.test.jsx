@@ -19,7 +19,7 @@ describe('Button', () => {
     expect(getByText(EXPECTED_TEXT)).toBeTruthy()
   })
 
-  it('should call onClick when it is clicked', () => {
+  it('should trigger onClick when it is clicked', () => {
     const { getByTestId } = render(
       <Button onClick={mockOnClick}>{EXPECTED_TEXT}</Button>
     )

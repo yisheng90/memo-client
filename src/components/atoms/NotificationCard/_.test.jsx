@@ -19,7 +19,7 @@ describe('NotificationCard', () => {
     expect(getByText(expectedText)).toBeTruthy()
   })
 
-  it('should call onCancel when the cancel button is clicked', () => {
+  it('should trigger onCancel when the cancel button is clicked', () => {
     const { getByTestId } = render(
       <NotificationCard message={lorem.sentence()} onCancel={mockOnCancel} />
     )

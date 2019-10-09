@@ -59,7 +59,7 @@ describe('Card', () => {
     expect(getByTestId('card__action--delete')).toBeTruthy()
   })
 
-  it('should call onDelete when delete button is clicked', () => {
+  it('should trigger onDelete when delete button is clicked', () => {
     const { getByTestId } = render(
       <Card
         idea={mockIdea}
@@ -72,7 +72,7 @@ describe('Card', () => {
 
     const cardElm = getByTestId('card__container')
 
-    fireEvent.mouseMove(cardElm)
+    fireEvent.pointerMove(cardElm)
 
     const deleteButton = getByTestId('card__action--delete')
 
@@ -81,7 +81,7 @@ describe('Card', () => {
     expect(mockOnDelete).toHaveBeenCalled()
   })
 
-  it('should call disableSort when any text field is focused', () => {
+  it('should trigger disableSort when any text field is focused', () => {
     const { getByTestId } = render(
       <Card
         idea={mockIdea}
@@ -99,7 +99,7 @@ describe('Card', () => {
     expect(mockDisableSort).toHaveBeenCalled()
   })
 
-  it('should call onUpdate when any text field is blurred', () => {
+  it('should trigger onUpdate when any text field is blurred', () => {
     const { getByTestId } = render(
       <Card
         idea={mockIdea}
@@ -118,7 +118,7 @@ describe('Card', () => {
     expect(mockOnUpdate).toHaveBeenCalled()
   })
 
-  it('should call enableSort when any text field is blurred', () => {
+  it('should trigger enableSort when any text field is blurred', () => {
     const { getByTestId } = render(
       <Card
         idea={mockIdea}
