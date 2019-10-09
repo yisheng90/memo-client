@@ -1,32 +1,50 @@
 import React from 'react'
-import { render, fireEvent, cleanup } from '@testing-library/react'
+import {render, fireEvent, cleanup} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { lorem } from 'faker'
-import { NotificationCard } from './index'
+import {lorem} from 'faker'
+import {Modal} from './index'
 
 const mockOnCancel = jest.fn()
+const TEST_ID = 'modal__container'
 
-describe('NotificationCard', () => {
-  afterEach(() => cleanup())
+describe('Modal', () => {
+    afterEach(() => cleanup())
 
-  it('should render NotificationCard', () => {
-    const expectedText = lorem.sentence()
-    const { getByTestId, getByText } = render(
-      <NotificationCard message={expectedText} onCancel={mockOnCancel} />
-    )
+    it('should render Modal if isVisible is true', () => {
+        const expectedText = lorem.sentence()
+        const {getByTestId, getByText} = render(
+            <Modal isVisible onCancel={mockOnCancel}>
+                <div>{expectedText}</div>
+            </Modal>
+        )
 
-    expect(getByTestId('notification__card')).toBeTruthy()
-    expect(getByText(expectedText)).toBeTruthy()
-  })
+        expect(getByTestId(TEST_ID)).toBeTruthy()
+        expect(getByText(expectedText)).toBeTruthy()
+    })
 
-  it('should trigger onCancel when the cancel button is clicked', () => {
-    const { getByTestId } = render(
-      <NotificationCard message={lorem.sentence()} onCancel={mockOnCancel} />
-    )
-    const closeButton = getByTestId('notification__card--close')
+    it('should render noting if isVisible is false', () => {
+        const expectedText = lorem.sentence()
+        const {container} = render(
+            <Modal onCancel={mockOnCancel}>
+                <div>{expectedText}</div>
+            </Modal>
+        )
 
-    fireEvent.click(closeButton)
+        expect(container.innerHTML).toBeFalsy()
+    })
 
-    expect(mockOnCancel).toHaveBeenCalled()
-  })
+    it('should trigger onCancel when close button is clicked', () => {
+        const expectedText = lorem.sentence()
+        const {getByTestId} = render(
+            <Modal isVisible onCancel={mockOnCancel}>
+                <div>{expectedText}</div>
+            </Modal>
+        )
+
+        const closeButton = getByTestId('modal__action--close')
+
+        fireEvent.click(closeButton)
+
+        expect(mockOnCancel).toHaveBeenCalled()
+    })
 })

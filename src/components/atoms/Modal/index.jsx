@@ -8,10 +8,9 @@ export const Modal = ({isVisible, onCancel, children}) => {
     if (isVisible) {
         return (
             <div className="modal__mask" onClick={onCancel}>
-                <div className="modal__container ">
+                <div className="modal__container" data-testid="modal__container">
                     <div className="modal__container--inner">
                         {children}
-
                         <span
                             className="modal__action--close"
                             onClick={onCancel}
@@ -30,5 +29,5 @@ export const Modal = ({isVisible, onCancel, children}) => {
 Modal.propTypes = {
     isVisible: PropTypes.bool,
     onCancel: PropTypes.func.isRequired,
-    children: PropTypes.arrayOf(PropTypes.element)
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element, PropTypes.string]).isRequired
 }
