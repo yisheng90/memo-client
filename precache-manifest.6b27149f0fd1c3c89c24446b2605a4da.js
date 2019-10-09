@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b3e6682126306079ac06e732827ed47",
+    "revision": "74dedea00640e201656baefb6356560e",
     "url": "/memo-client/index.html"
   },
   {
-    "revision": "3f080568561d67982cfa",
-    "url": "/memo-client/static/css/main.31765668.chunk.css"
+    "revision": "421a05fe5fc899a98e18",
+    "url": "/memo-client/static/css/main.d9e69edb.chunk.css"
   },
   {
     "revision": "dbe93c1689a6447dc168",
     "url": "/memo-client/static/js/2.ad9588bd.chunk.js"
   },
   {
-    "revision": "3f080568561d67982cfa",
+    "revision": "421a05fe5fc899a98e18",
     "url": "/memo-client/static/js/main.72eb418f.chunk.js"
   },
   {
