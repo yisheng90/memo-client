@@ -36,6 +36,7 @@ export const Card = ({idea, onDelete, onUpdate, enableSort, disableSort}) => {
         if (removeIdea === true) {
             onDelete(formValues.id)
         }
+        enableSort &&  enableSort()
         setModalVisible(false)
     }
 
