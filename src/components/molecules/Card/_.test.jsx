@@ -13,7 +13,7 @@ const mockIdea = {
   id: random.uuid(),
   title: lorem.sentence(),
   body: lorem.sentence(),
-  created_at: date.past(),
+  created_at: date.past,
 }
 
 describe('Card', () => {
@@ -50,7 +50,7 @@ describe('Card', () => {
 
     const cardElm = getByTestId('card__container')
 
-    fireEvent.mouseMove(cardElm)
+    fireEvent.pointerMove(cardElm)
 
     expect(getByTestId('card__container')).toBeTruthy()
     expect(getByTestId('card__details--date')).toBeTruthy()
