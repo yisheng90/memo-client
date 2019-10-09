@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memo-client/static/css/main.8b990b3a.chunk.css",
+    "main.css": "/memo-client/static/css/main.31765668.chunk.css",
     "main.js": "/memo-client/static/js/main.72eb418f.chunk.js",
     "main.js.map": "/memo-client/static/js/main.72eb418f.chunk.js.map",
     "runtime-main.js": "/memo-client/static/js/runtime-main.a73ef31b.js",
@@ -8,14 +8,14 @@
     "static/js/2.ad9588bd.chunk.js": "/memo-client/static/js/2.ad9588bd.chunk.js",
     "static/js/2.ad9588bd.chunk.js.map": "/memo-client/static/js/2.ad9588bd.chunk.js.map",
     "index.html": "/memo-client/index.html",
-    "precache-manifest.835d189504de529b57a8dc0337a1c5b2.js": "/memo-client/precache-manifest.835d189504de529b57a8dc0337a1c5b2.js",
+    "precache-manifest.9f49cd33b40a11801a4d7cb1000b1d16.js": "/memo-client/precache-manifest.9f49cd33b40a11801a4d7cb1000b1d16.js",
     "service-worker.js": "/memo-client/service-worker.js",
-    "static/css/main.8b990b3a.chunk.css.map": "/memo-client/static/css/main.8b990b3a.chunk.css.map"
+    "static/css/main.31765668.chunk.css.map": "/memo-client/static/css/main.31765668.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.a73ef31b.js",
     "static/js/2.ad9588bd.chunk.js",
-    "static/css/main.8b990b3a.chunk.css",
+    "static/css/main.31765668.chunk.css",
     "static/js/main.72eb418f.chunk.js"
   ]
 }
