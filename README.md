@@ -15,9 +15,9 @@ In this app,
 1. The ideas are displayed as tiles, with a height and width of 150px and a 10px margin, aligned horizontally to fit screen width.
 2. The user should be able to create a new idea by clicking '+ New idea' button.
 3. The 'Title' filed of the newly created idea should be focused.
-3. The 'Title' and 'Body' fields of the idea should be editable.
-4. Blurring any of the input fields should trigger an update.
-5. Each tile should have a delete icon which should only be visible when hovering over the tile. 
+4. The 'Title' and 'Body' fields of the idea should be editable.
+5. Blurring any of the input fields should trigger an update.
+6. Each tile should have a delete icon which should only be visible when hovering over the tile. 
 
 ### Bonus
 
