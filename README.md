@@ -1,68 +1,101 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Idea Board
 
-## Available Scripts
+This project is an idea board build on React.js. 
 
-In the project directory, you can run:
+The live version of the app is [here](https://yisheng90.github.io/memo-client/).
 
-### `yarn start`
+The backend services repo can be found [here](https://github.com/yisheng90/memo-server).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Demo](https://media.giphy.com/media/lP3sOa4OgCNnMOlObH/giphy.gif)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Requirements
 
-### `yarn test`
+In this app, 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. The ideas are displayed as tiles, with a height and width of 150px and a 10px margin, aligned horizontally to fit screen width.
+2. The user should be able to create a new idea by clicking '+ New idea' button.
+3. The 'Title' filed of the newly created idea should be focused.
+3. The 'Title' and 'Body' fields of the idea should be editable.
+4. Blurring any of the input fields should trigger an update.
+5. Each tile should have a delete icon which should only be visible when hovering over the tile. 
 
-### `yarn build`
+### Bonus
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the app, 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. The user can sort the idea base on 'Title' or 'Create Date'.
+2. A character counter will be shown to user if the 'Body' field character is 15 lesser to reach io 140.
+3. Notification will be displayed when user update the field successfully.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technical Spec
 
-### `yarn eject`
+This app is build on the following stack:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Main Stack
+     -  React.js (Create React App)
+     -  Babel
+     
+2. Test
+     - Jest
+     - @testing-library/react
+     
+3. Formatting
+     - Eslint
+     - Prettier
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Questions:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**1. What frameworks might be useful to manage the complexity of this problem?** 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**A:** The following frameworks/libraries cloud be helpful for addressing this problem.
+    
+General:
 
-## Learn More
+- Lodash
+    This utility library can help is sorting.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React Progressive Loader
+    React progressive loading can improve user exigence and performance especially when the number of idea is getting larger.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Bootstrap
+    This library may help in layout configuration of the app. 
+    
+- styled-components
+    This library provides a very neat way for developer to amend the style of the component.
+    It also allow developer to write all HTML element as a component.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Quality:
 
-### Analyzing the Bundle Size
+- prop-types (implemented)
+    This library helps developer to identify potential bug during development by doing the prop type checking for the component.
+    
+      
+**2. How would you extend this project if you had more time?**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+**A:** If I were given more time, I would:
 
-### Making a Progressive Web App
+General:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Move the sorting to backend service.
+- Introduce caching in LocalStorage to improve user experience on first load.
+- Explore to server-side rendering.
+- Improve performance by eliminating unnecessary re-rendering. 
 
-### Advanced Configuration
+Quality:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- Write test for hooks functions. 
+- Implementing type checking for helper functions. This can be done using `prop-types` library. However, I would prefer to convert the project to TypeScript.
 
-### Deployment
+Others:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- Implement Storybook to each component.
+- Move reusable component to a shared UI library.
+     
 
-### `yarn build` fails to minify
+**3. How would you make this work on a mobile device?**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**A:** In order to make this app work on mobile, we need to:
+
+  - Define breakpoint to style the component different on smaller screen size. 
+  - Implement library like `react-with-gesture` to help events such as pointer event to be use in mobile devices. ([pointer event is current not supported on safari and ios](pointer event is current not supported on safari and ios)))] 
