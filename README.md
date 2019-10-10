@@ -98,4 +98,5 @@ Others:
 **A:** In order to make this app work on mobile, we need to:
 
   - Define breakpoint to style the component different on smaller screen size. 
-  - Implement library like `react-with-gesture` to help events such as pointer event to be use in mobile devices. ([pointer event is current not supported on safari and ios](pointer event is current not supported on safari and ios)))] 
+  - Implement library like `react-with-gesture` to help events such as pointer event to be use in mobile devices. ([pointer event is current not supported on safari and ios](
+)))] 
